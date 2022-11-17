@@ -18,6 +18,7 @@ const pxtovw_config = pxtovw({
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
+  base:'/screen/',
   resolve:{
     alias:{
       "@":resolve(__dirname,"src")
