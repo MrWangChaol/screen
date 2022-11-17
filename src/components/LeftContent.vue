@@ -2,9 +2,9 @@
 import CardComponent from "@/components/CardComponent.vue";
 import ChartComponent from "@/components/ChartComponent.vue";
 import { ref, reactive } from "vue";
+import { pieChartOption, barChartOtion } from "@/utils/chartOption.js";
 const option = ref("");
 const baroption = ref("");
-import { pieChartOption, barChartOtion } from "@/utils/chartOption.js";
 option.value = pieChartOption();
 baroption.value = barChartOtion();
 const config = reactive({

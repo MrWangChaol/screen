@@ -173,3 +173,58 @@ export const barChartOtion = () => {
     }
     return option
 }
+
+export const rightbarChartOtion = (cityData) => {
+    const option = {
+        grid: {
+            left: "10%",
+            right: "10",
+            bottom: "20",
+        },
+        xAxis: {
+            type: "category",
+            data: cityData.xList,
+            axisLabel: {
+                fontSize: 10,
+                color: "#ffffff",
+                margin: 5,
+            },
+        },
+        yAxis: {
+            type: "value",
+        },
+        barWidth: "30%",
+        tooltip: {},
+        series: [{
+            data: cityData.yList,
+            type: "bar",
+            label: {
+                show: true,
+                position: "top",
+                textBorderColor: "inherit",
+                color: "#fff",
+            },
+            // symbolSize: ['30%', 10],
+            // symbolOffset: [0, -6],
+            itemStyle: {
+                color: new echarts.graphic.LinearGradient(
+                    0,
+                    1,
+                    0,
+                    0,
+                    [{
+                            offset: 0,
+                            color: "#fcc", // 0% 处的颜色
+                        },
+                        {
+                            offset: 1,
+                            color: "#abcdef", // 100% 处的颜色
+                        },
+                    ],
+                    false
+                ),
+            },
+        }, ],
+    };
+    return option
+}
